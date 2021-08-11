@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  firstcontainer:
+    container_name: backend
+    # image: node:14.15.4
+    build: ./
+    command: npm start
+    working_dir: /usr/src/nodeapi
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/nodeapi
